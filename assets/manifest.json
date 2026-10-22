@@ -1,0 +1,290 @@
+{
+  "images": [
+    {
+      "file": "assets/images/joint-13-0.webp",
+      "episode": "physical_test_joint_0013",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-13-1.webp",
+      "episode": "physical_test_joint_0013",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-23-0.webp",
+      "episode": "physical_test_joint_0023",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-23-1.webp",
+      "episode": "physical_test_joint_0023",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-43-0.webp",
+      "episode": "physical_test_joint_0043",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-43-1.webp",
+      "episode": "physical_test_joint_0043",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-83-0.webp",
+      "episode": "physical_test_joint_0083",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/joint-83-1.webp",
+      "episode": "physical_test_joint_0083",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-13-0.webp",
+      "episode": "physical_test_surface_0013",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-13-1.webp",
+      "episode": "physical_test_surface_0013",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-23-0.webp",
+      "episode": "physical_test_surface_0023",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-23-1.webp",
+      "episode": "physical_test_surface_0023",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-43-0.webp",
+      "episode": "physical_test_surface_0043",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-43-1.webp",
+      "episode": "physical_test_surface_0043",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-83-0.webp",
+      "episode": "physical_test_surface_0083",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/surface-83-1.webp",
+      "episode": "physical_test_surface_0083",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-13-0.webp",
+      "episode": "physical_test_gravity_0013",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-13-1.webp",
+      "episode": "physical_test_gravity_0013",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-23-0.webp",
+      "episode": "physical_test_gravity_0023",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-23-1.webp",
+      "episode": "physical_test_gravity_0023",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-43-0.webp",
+      "episode": "physical_test_gravity_0043",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-43-1.webp",
+      "episode": "physical_test_gravity_0043",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-83-0.webp",
+      "episode": "physical_test_gravity_0083",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/gravity-83-1.webp",
+      "episode": "physical_test_gravity_0083",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-13-0.webp",
+      "episode": "physical_test_collision_0013",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-13-1.webp",
+      "episode": "physical_test_collision_0013",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-23-0.webp",
+      "episode": "physical_test_collision_0023",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-23-1.webp",
+      "episode": "physical_test_collision_0023",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-43-0.webp",
+      "episode": "physical_test_collision_0043",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-43-1.webp",
+      "episode": "physical_test_collision_0043",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-83-0.webp",
+      "episode": "physical_test_collision_0083",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/collision-83-1.webp",
+      "episode": "physical_test_collision_0083",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-13-0.webp",
+      "episode": "physical_test_carry_0013",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-13-1.webp",
+      "episode": "physical_test_carry_0013",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-23-0.webp",
+      "episode": "physical_test_carry_0023",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-23-1.webp",
+      "episode": "physical_test_carry_0023",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-43-0.webp",
+      "episode": "physical_test_carry_0043",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-43-1.webp",
+      "episode": "physical_test_carry_0043",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-83-0.webp",
+      "episode": "physical_test_carry_0083",
+      "state": 0,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    },
+    {
+      "file": "assets/images/carry-83-1.webp",
+      "episode": "physical_test_carry_0083",
+      "state": 1,
+      "view": 1,
+      "source": "Recorded clean RGB render; resized and WebP encoded."
+    }
+  ],
+  "figures": {
+    "framework": "Paper Figure 3",
+    "dataset": "Paper Figure 2",
+    "trajectories": "Paper Figure 6"
+  },
+  "results": "Paper Tables 2 and 3; Figure 7. Values transcribed without recomputation."
+}
