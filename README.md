@@ -1,6 +1,6 @@
 # RAVEL — anonymous research homepage
 
-A responsive, static project page for **RAVEL: A Spatial Coding Harness for Reasoning about Change and Preservation**.
+A responsive, static project page for **RAVEL: A Spatial Coding Harness for Dynamic Relational Reasoning**.
 
 ## Preview locally
 
@@ -14,9 +14,9 @@ Open `http://localhost:8080`. No build, package installation, API key, GPU, or b
 
 - Three continuous, independently moving rows of real dataset images, with a pause control and reduced-motion support.
 - Five physical-category tabs and a keyboard-accessible before/after comparison slider.
-- Dataset overview, original execution-loop figure, and recorded trajectory examples.
-- Four experiment views, transcribed from the supplied paper: full-cohort, matched controls, joint relation accuracy, and appearance robustness.
-- Three resource links: Code (on-page release note), Data (on-page preview), and Paper (anonymous PDF). The full paper with supplementary material is linked in the code section.
+- All six figures from the current anonymous manuscript: research overview, dataset, shared harness, matched gains, evidence age/resolution, and recorded trajectories.
+- Four experiment views, transcribed from the current manuscript Tables 1 and 2: overall metrics, T1–T5 accuracy, matched controls, and joint relation accuracy.
+- Three resource links: Code (on-page release note), Data (on-page preview), and Paper (anonymous PDF). The code section links to the same current paper.
 
 ## Edit
 
@@ -24,7 +24,7 @@ Open `http://localhost:8080`. No build, package installation, API key, GPU, or b
 - `style.css`: layout, colors, responsive styles, motion.
 - `app.js`: category examples, filmstrip ordering, result values and protocol notes.
 - `assets/manifest.json`: image and figure provenance, using anonymous episode identifiers.
-- `assets/papers/`: anonymous paper PDFs with identity metadata removed.
+- `assets/papers/paper.pdf`: current 11-page anonymous paper with author-neutral metadata and creation/producer metadata removed.
 
 When anonymous Code/Data release URLs are available, replace the corresponding hero links. Until then they intentionally link to local descriptions and previews rather than implying downloadable releases exist.
 
@@ -38,6 +38,6 @@ The page contains no author names, institutions, emails, personal filesystem pat
 
 ## Evidence and attribution
 
-All numerical values come from the supplied RAVEL manuscript. Full-cohort comparisons include additional geometry and state-wise calls for RAVEL; the matched 500-question table is shown separately. The dataset size follows the manuscript; this repository is a visual project page, not the full data release.
+The page follows the anonymous manuscript revision supplied on 2026-10-27. All numerical values are transcribed from that revision. Full-cohort comparisons include additional geometry and state-wise calls for RAVEL; the matched 500-question table is shown separately. The dataset size follows the manuscript; this repository is a visual project page, not the full data release. Older supplementary material has been removed from the published tree so the download and figures refer to the current paper.
 
 Composition references: [SolarRenderer](https://enderfga.cn/SolarRenderer/) (moving visual opening) and [Long-WAM](https://nvlabs.github.io/LongLive/Long-WAM/) (section hierarchy and experiment presentation). Website code and styling were written for this page; their videos, branding, and code are not copied.

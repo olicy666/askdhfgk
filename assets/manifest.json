@@ -282,9 +282,49 @@
     }
   ],
   "figures": {
-    "framework": "Paper Figure 3",
-    "dataset": "Paper Figure 2",
-    "trajectories": "Paper Figure 6"
+    "concept": {
+      "figure": 1,
+      "page": 1,
+      "file": "assets/figures/concept.png",
+      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+    },
+    "dataset": {
+      "figure": 2,
+      "page": 3,
+      "file": "assets/figures/dataset.png",
+      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+    },
+    "framework": {
+      "figure": 3,
+      "page": 5,
+      "file": "assets/figures/framework.png",
+      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+    },
+    "matched-gains": {
+      "figure": 4,
+      "page": 6,
+      "file": "assets/figures/matched-gains.png",
+      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+    },
+    "evidence-detail": {
+      "figure": 5,
+      "page": 7,
+      "file": "assets/figures/evidence-detail.png",
+      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+    },
+    "trajectories": {
+      "figure": 6,
+      "page": 8,
+      "file": "assets/figures/trajectories.png",
+      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+    }
   },
-  "results": "Paper Tables 2 and 3; Figure 7. Values transcribed without recomputation."
+  "results": "Current manuscript Tables 1 and 2. All table values follow the 2026-10-27 manuscript, as requested. Four views: overall metrics, T1–T5, matched controls, and joint endpoints plus updates.",
+  "manuscript": {
+    "title": "RAVEL: A Spatial Coding Harness for Dynamic Relational Reasoning",
+    "revision": "2026-10-27",
+    "pages": 11,
+    "file": "assets/papers/paper.pdf",
+    "author": "Anonymous Authors"
+  }
 }
