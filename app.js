@@ -32,44 +32,42 @@ function selectCategory(cat,index){
 categories.forEach((cat,i)=>{const b=document.createElement('button');b.textContent=cat.name;b.id='category-'+cat.key;b.setAttribute('role','tab');b.setAttribute('aria-controls','episode-panel');b.addEventListener('click',()=>{selectCategory(cat,i);document.querySelector('.episode-panel').setAttribute('aria-labelledby',b.id)});categoryTabs.append(b);});
 document.querySelector('.episode-panel').id='episode-panel';document.querySelector('.episode-panel').setAttribute('role','tabpanel');document.querySelector('.episode-panel').setAttribute('aria-labelledby','category-joint');selectCategory(categories[0],0);
 function keyboardTabs(list){list.addEventListener('keydown',e=>{const buttons=[...list.querySelectorAll('[role=tab]')];let i=buttons.indexOf(document.activeElement);if(i<0)return;if(e.key==='ArrowRight')i=(i+1)%buttons.length;else if(e.key==='ArrowLeft')i=(i+buttons.length-1)%buttons.length;else if(e.key==='Home')i=0;else if(e.key==='End')i=buttons.length-1;else return;e.preventDefault();buttons[i].focus();buttons[i].click();});}keyboardTabs(categoryTabs);
+// Paper Table 1; null entries retain the manuscript's unreported metrics.
+// Per method: Whole, Items, T1-T5, Changed F1, joint Changed/Rechecked/Unrelated.
+const cohortResults = [
+ {backend:'Qwen3-VL-4B-Instruct',gain:'+19.80',direct:['3.60','44.66','14.38','2.25','0.00','1.83','0.00','18.85','5.18','16.94','38.50'],ravel:['23.40','78.92','67.75','10.50','12.60','23.17','5.63','62.40','50.36','62.68','87.98']},
+ {backend:'Qwen3-VL-8B-Instruct',direct:null,ravel:null},
+ {backend:'Qwen3-VL-32B-Instruct',direct:null,ravel:null},
+ {backend:'Spatial-SSRL-Qwen3VL-4B',gain:'+17.10',direct:['1.78','37.59','8.00','0.13','0.00','1.00','0.00','12.14','2.04','7.96','39.52'],ravel:['18.88','75.74','62.00','6.75','7.30','17.67','3.25','56.06','43.28','57.56','87.39']},
+ {backend:'Molmo2-ER',gain:'+13.35',direct:['8.75','47.45','39.50','2.75','0.00','2.00','0.00','38.03','0.49','39.84','0.00'],ravel:['22.10','74.67','65.50','11.13','9.20','22.50','5.50','53.13','35.33','62.34','78.84']},
+ {backend:'MiniCPM-V4.5',direct:null,ravel:null},
+ {backend:'DeepSeek-4.1-Flash',direct:null,ravel:null},
+ {backend:'GPT-6-Luna',direct:null,ravel:null},
+ {backend:'GPT-6.1-Sol',gain:'+16.95',direct:['62.05','92.76','88.13','55.38','55.20','64.00','49.75','88.13','81.63','93.08','94.84'],ravel:['79.00','96.64','96.00','69.00','77.80','80.83','72.13','95.49','93.43','96.81','97.64']},
+ {backend:'GPT-6-Astra',gain:'+18.50',direct:['62.70','92.83','87.50','57.38','54.30','66.50','50.88','88.25','81.60','93.73','94.30'],ravel:['81.20','96.96','95.75','73.75','79.10','86.50','72.75','95.71','94.30','96.78','97.54']}
+];
+function methodMetrics(row, method){return row[method] || Array(11).fill('–');}
 const tables={
  main:{
   kicker:'Full cohort · 4,000 questions · Paper Table 1',
   title:'Whole-question, item accuracy and change detection (%)',
   headers:['Backend','Direct · Whole','RAVEL · Whole','Δ Whole (pp)','Direct · Items','RAVEL · Items','Direct · Changed F1','RAVEL · Changed F1'],
-  rows:[
-   ['Qwen3-VL-4B','3.60','23.40','+19.80','44.66','78.92','18.85','62.40'],
-   ['Spatial-SSRL-4B','1.78','18.88','+17.10','37.59','75.74','12.14','56.06'],
-   ['Molmo2-ER','8.75','22.10','+13.35','47.45','74.67','38.03','53.13'],
-   ['Sol','62.05','79.00','+16.95','92.76','96.64','88.13','95.49'],
-   ['Astra','62.70','81.20','+18.50','92.83','96.96','88.25','95.71']
-  ],
+  rows:cohortResults.map(row => {const d=methodMetrics(row,'direct'),r=methodMetrics(row,'ravel');return [row.backend,d[0],r[0],row.gain || '–',d[1],r[1],d[7],r[7]];}),
   proposed:[2,5,7],gains:[3],
-  note:'Whole requires every semantic item in a question to be correct; Items micro-averages 77,303 answer items. Direct uses permitted images and the final schema in one call. RAVEL adds public initial geometry and state-wise calls (8,995 versus 4,000 per backend). Matched controls are shown separately. Sol: gpt-6.1-sol; Astra: gpt-6-astra, both at medium reasoning effort.'
+  note:'Whole requires every semantic item in a question to be correct; Items micro-averages 77,303 answer items. Direct uses permitted images and the final schema in one call. RAVEL adds public initial geometry and state-wise calls (8,995 versus 4,000 per backend). Matched controls are shown separately. GPT-6.1-Sol and GPT-6-Astra use medium reasoning effort. A dash marks a metric not reported in Table 1. Figure 1 separately reports Qwen3-VL-8B Whole at 8.40% Direct and 24.28% RAVEL; its Table 1 row remains unreported.'
  },
  tasks:{
   kicker:'Full cohort · Whole-question accuracy by task · Paper Table 1',
   title:'From observed endpoints to sequential tracking (%)',
   headers:['Backend','Method','T1 · Single relation','T2 · Prediction','T3 · Joint updates','T4 · Edit choice','T5 · Tracking'],
-  rows:[
-   ['Qwen3-VL-4B','Direct','14.38','2.25','0.00','1.83','0.00'],
-   ['Qwen3-VL-4B','RAVEL','67.75','10.50','12.60','23.17','5.63'],
-   ['Spatial-SSRL-4B','Direct','8.00','0.13','0.00','1.00','0.00'],
-   ['Spatial-SSRL-4B','RAVEL','62.00','6.75','7.30','17.67','3.25'],
-   ['Molmo2-ER','Direct','39.50','2.75','0.00','2.00','0.00'],
-   ['Molmo2-ER','RAVEL','65.50','11.13','9.20','22.50','5.50'],
-   ['Sol','Direct','88.13','55.38','55.20','64.00','49.75'],
-   ['Sol','RAVEL','96.00','69.00','77.80','80.83','72.13'],
-   ['Astra','Direct','87.50','57.38','54.30','66.50','50.88'],
-   ['Astra','RAVEL','95.75','73.75','79.10','86.50','72.75']
-  ],
+  rows:cohortResults.flatMap(row => [['direct','Direct'],['ravel','RAVEL']].map(([key,label]) => [row.backend,label,...methodMetrics(row,key).slice(2,7)])),
   proposed:[],gains:[],highlightAlternating:true,
-  note:'T1 establishes a single observed relation; T2 predicts hidden outcomes; T3 jointly updates multiple relations; T4 selects the exact admissible edit set; T5 tracks values and updates across four to six states. Values follow the current manuscript. The full RAVEL configuration includes additional initial declarations and state-wise inference.'
+  note:'T1 establishes a single observed relation; T2 predicts hidden outcomes; T3 jointly updates multiple relations; T4 selects the exact admissible edit set; T5 tracks values and updates across four to six states. Dashes retain unreported entries in the current manuscript. The full RAVEL configuration includes additional initial declarations and state-wise inference.'
  },
  matched:{
   kicker:'Balanced500 · 100 questions per task · Paper Table 2',
   title:'Shared execution with optional P/L binding (%)',
-  headers:['Configuration','P','L','Qwen · Whole','Qwen · Items','Qwen · Changed F1','Astra · Whole','Astra · Items','Astra · Changed F1'],
+  headers:['Configuration','P','L','Qwen-4B · Whole','Qwen-4B · Items','Qwen-4B · Changed F1','Astra · Whole','Astra · Items','Astra · Changed F1'],
   rows:[
    ['Matched Direct','–','–','6.20','52.64','23.65','78.00','96.14','94.57'],
    ['C00 · Binding off','0','0','21.60','78.56','62.15','80.00','96.73','95.53'],
@@ -85,21 +83,10 @@ const tables={
   kicker:'Full cohort · T3 / T5 joint relation scoring · Paper Table 1',
   title:'Both endpoints and the update must be correct (%)',
   headers:['Backend','Method','Changed','Rechecked preservation','Unrelated preservation'],
-  rows:[
-   ['Qwen3-VL-4B','Direct','5.18','16.94','38.50'],
-   ['Qwen3-VL-4B','RAVEL','50.36','62.68','87.98'],
-   ['Spatial-SSRL-4B','Direct','2.04','7.96','39.52'],
-   ['Spatial-SSRL-4B','RAVEL','43.28','57.56','87.39'],
-   ['Molmo2-ER','Direct','0.49','39.84','0.00'],
-   ['Molmo2-ER','RAVEL','35.33','62.34','78.84'],
-   ['Sol','Direct','81.63','93.08','94.84'],
-   ['Sol','RAVEL','93.43','96.81','97.64'],
-   ['Astra','Direct','81.60','93.73','94.30'],
-   ['Astra','RAVEL','94.30','96.78','97.54']
-  ],
+  rows:cohortResults.flatMap(row => [['direct','Direct'],['ravel','RAVEL']].map(([key,label]) => [row.backend,label,...methodMetrics(row,key).slice(8)])),
   proposed:[],gains:[],highlightAlternating:true,
-  note:'Joint accuracy requires both endpoint values and the T3/T5 update label to be correct. Rechecked preservation involves an action participant; unrelated preservation lies outside that participation scope. Known false-to-false relations are also preservation. These results use the full-configuration protocol.'
+  note:'Joint accuracy requires both endpoint values and the T3/T5 update label to be correct. Rechecked preservation involves an action participant; unrelated preservation lies outside that participation scope. Known false-to-false relations are also preservation. These results use the full-configuration protocol. Dashes retain unreported entries in Table 1.'
  }
 };
-function renderTable(key){const t=tables[key];document.querySelector('#table-kicker').textContent=t.kicker;document.querySelector('#table-title').textContent=t.title;document.querySelector('#table-note').textContent=t.note;const table=document.querySelector('#results-table');table.replaceChildren();const caption=document.createElement('caption');caption.className='sr-only';caption.textContent=t.title;table.append(caption);const head=table.createTHead().insertRow();t.headers.forEach((label,i)=>{const th=document.createElement('th');th.scope='col';th.textContent=label;if(t.proposed.includes(i))th.className='proposed';head.append(th)});const body=table.createTBody();t.rows.forEach((row,r)=>{const tr=body.insertRow();row.forEach((value,c)=>{const cell=tr.insertCell();cell.textContent=value;if(c===0)cell.classList.add('model');if(t.proposed.includes(c)||(t.highlightRow===r&&c>0)||(t.highlightAlternating&&r%2===1&&c>0))cell.classList.add('proposed');if(t.gains.includes(c))cell.classList.add('gain');});});document.querySelectorAll('[data-result]').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.result===key));b.tabIndex=b.dataset.result===key?0:-1});document.querySelector('#results-panel').setAttribute('aria-labelledby','tab-'+key);}
+function renderTable(key){const t=tables[key];document.querySelector('#table-kicker').textContent=t.kicker;document.querySelector('#table-title').textContent=t.title;document.querySelector('#table-note').textContent=t.note;const table=document.querySelector('#results-table');table.replaceChildren();const caption=document.createElement('caption');caption.className='sr-only';caption.textContent=t.title;table.append(caption);const head=table.createTHead().insertRow();t.headers.forEach((label,i)=>{const th=document.createElement('th');th.scope='col';th.textContent=label;if(t.proposed.includes(i))th.className='proposed';head.append(th)});const body=table.createTBody();t.rows.forEach((row,r)=>{const tr=body.insertRow();if(row.slice(2).every(value=>value==='–'))tr.classList.add('unreported');row.forEach((value,c)=>{const cell=tr.insertCell();cell.textContent=value;if(c===0)cell.classList.add('model');if(t.proposed.includes(c)||(t.highlightRow===r&&c>0)||(t.highlightAlternating&&r%2===1&&c>0))cell.classList.add('proposed');if(t.gains.includes(c))cell.classList.add('gain');});});document.querySelectorAll('[data-result]').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.result===key));b.tabIndex=b.dataset.result===key?0:-1});document.querySelector('#results-panel').setAttribute('aria-labelledby','tab-'+key);}
 document.querySelectorAll('[data-result]').forEach(b=>b.addEventListener('click',()=>renderTable(b.dataset.result)));keyboardTabs(document.querySelector('#result-tabs'));renderTable('main');

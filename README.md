@@ -14,7 +14,7 @@ Open `http://localhost:8080`. No build, package installation, API key, GPU, or b
 
 - Three continuous, independently moving rows of real dataset images, with a pause control and reduced-motion support.
 - Five physical-category tabs and a keyboard-accessible before/after comparison slider.
-- All six figures from the current anonymous manuscript: research overview, dataset, shared harness, matched gains, evidence age/resolution, and recorded trajectories.
+- All five figures from the current anonymous manuscript: research overview, dataset, shared harness, evidence age/resolution, and recorded trajectories.
 - Four experiment views, transcribed from the current manuscript Tables 1 and 2: overall metrics, T1–T5 accuracy, matched controls, and joint relation accuracy.
 - Three resource links: Code (on-page release note), Data (on-page preview), and Paper (anonymous PDF). The code section links to the same current paper.
 
@@ -24,7 +24,7 @@ Open `http://localhost:8080`. No build, package installation, API key, GPU, or b
 - `style.css`: layout, colors, responsive styles, motion.
 - `app.js`: category examples, filmstrip ordering, result values and protocol notes.
 - `assets/manifest.json`: image and figure provenance, using anonymous episode identifiers.
-- `assets/papers/paper.pdf`: current 11-page anonymous paper with author-neutral metadata and creation/producer metadata removed.
+- `assets/papers/paper.pdf`: current 10-page anonymous paper with author-neutral metadata and creation/producer metadata removed.
 
 When anonymous Code/Data release URLs are available, replace the corresponding hero links. Until then they intentionally link to local descriptions and previews rather than implying downloadable releases exist.
 
@@ -38,6 +38,6 @@ The page contains no author names, institutions, emails, personal filesystem pat
 
 ## Evidence and attribution
 
-The page follows the anonymous manuscript revision supplied on 2026-10-27. All numerical values are transcribed from that revision. Full-cohort comparisons include additional geometry and state-wise calls for RAVEL; the matched 500-question table is shown separately. The dataset size follows the manuscript; this repository is a visual project page, not the full data release. Older supplementary material has been removed from the published tree so the download and figures refer to the current paper.
+The page follows the anonymous manuscript revision supplied on 2026-10-29. All numerical values are transcribed from that revision. Figure 1 reports six headline comparisons, including Qwen3-VL-8B at 8.40%/24.28% Whole. Table 1 lists ten backends, with five unpopulated model rows; these dashes are preserved in all three corresponding table views. The six rows of Table 2 follow the PDF exactly. Full-cohort comparisons include additional geometry and state-wise calls for RAVEL; the matched 500-question table is shown separately. The dataset size follows the manuscript; this repository is a visual project page, not the full data release. Older supplementary material has been removed from the published tree so the download and figures refer to the current paper.
 
 Composition references: [SolarRenderer](https://enderfga.cn/SolarRenderer/) (moving visual opening) and [Long-WAM](https://nvlabs.github.io/LongLive/Long-WAM/) (section hierarchy and experiment presentation). Website code and styling were written for this page; their videos, branding, and code are not copied.

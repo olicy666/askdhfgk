@@ -286,44 +286,78 @@
       "figure": 1,
       "page": 1,
       "file": "assets/figures/concept.png",
-      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+      "source": "Current anonymous manuscript supplied 2026-10-29; cropped directly from the PDF without changing figure contents.",
+      "clip_points": [
+        317.25,
+        183.5,
+        553.5,
+        417
+      ],
+      "width": 1182,
+      "height": 1168
     },
     "dataset": {
       "figure": 2,
       "page": 3,
       "file": "assets/figures/dataset.png",
-      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+      "source": "Current anonymous manuscript supplied 2026-10-29; cropped directly from the PDF without changing figure contents.",
+      "clip_points": [
+        58,
+        70,
+        554,
+        275
+      ],
+      "width": 1984,
+      "height": 820
     },
     "framework": {
       "figure": 3,
       "page": 5,
       "file": "assets/figures/framework.png",
-      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
-    },
-    "matched-gains": {
-      "figure": 4,
-      "page": 6,
-      "file": "assets/figures/matched-gains.png",
-      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+      "source": "Current anonymous manuscript supplied 2026-10-29; cropped directly from the PDF without changing figure contents.",
+      "clip_points": [
+        58,
+        72,
+        554,
+        252
+      ],
+      "width": 1984,
+      "height": 720
     },
     "evidence-detail": {
-      "figure": 5,
+      "figure": 4,
       "page": 7,
       "file": "assets/figures/evidence-detail.png",
-      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+      "source": "Current anonymous manuscript supplied 2026-10-29; cropped directly from the PDF without changing figure contents.",
+      "clip_points": [
+        58,
+        69,
+        554,
+        207
+      ],
+      "width": 1984,
+      "height": 552
     },
     "trajectories": {
-      "figure": 6,
+      "figure": 5,
       "page": 8,
       "file": "assets/figures/trajectories.png",
-      "source": "Current anonymous manuscript; cropped from the original PDF without altering figure contents."
+      "source": "Current anonymous manuscript supplied 2026-10-29; cropped directly from the PDF without changing figure contents.",
+      "clip_points": [
+        58,
+        68,
+        554,
+        264
+      ],
+      "width": 1984,
+      "height": 784
     }
   },
-  "results": "Current manuscript Tables 1 and 2. All table values follow the 2026-10-27 manuscript, as requested. Four views: overall metrics, T1–T5, matched controls, and joint endpoints plus updates.",
+  "results": "Tables 1 and 2 from the anonymous manuscript supplied 2026-10-29. Preserve all unreported Table 1 entries as dashes. Figure 1 separately reports Qwen3-VL-8B Direct/RAVEL Whole 8.40/24.28. Four table views: overall, T1-T5, matched controls, and joint endpoints plus updates.",
   "manuscript": {
     "title": "RAVEL: A Spatial Coding Harness for Dynamic Relational Reasoning",
-    "revision": "2026-10-27",
-    "pages": 11,
+    "revision": "2026-10-29",
+    "pages": 10,
     "file": "assets/papers/paper.pdf",
     "author": "Anonymous Authors"
   }
